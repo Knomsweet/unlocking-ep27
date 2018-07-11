@@ -75,9 +75,9 @@ namespace temperature {
             double kelvin = Math.Round(celsius + 273.15,2) ;
             return kelvin;
         }
-        public string NoData (string input) {
-            input = "fail";
-            return input;
-        }
+        // public string NoData (string input) {
+        //     input = "fail";
+        //     return input;
+        // }
     }
 }
