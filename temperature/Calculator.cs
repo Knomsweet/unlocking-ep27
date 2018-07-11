@@ -18,8 +18,10 @@ namespace temperature {
         /// </summary>
         /// <param name="fahrenheit"></param>
         /// <returns></returns>
-        public double ConvertFahrenheitToCelsius (double fahrenheit) {
-            throw new NotImplementedException ();
+   
+        public double  ConvertFahrenheitToCelsius (double  fahrenheit) {
+            double  celsius = Math.Round((fahrenheit - 32) * 5/9,2);
+            return celsius ;
         }
         /// <summary>
         /// เปลี่ยนค่า องศา Kelvin ให้เป็น Celsius
@@ -28,7 +30,8 @@ namespace temperature {
         /// <param name="kelvin"></param>
         /// <returns></returns>
         public double ConvertKelvinToCelsius (double kelvin) {
-            throw new NotImplementedException ();
+            double celsius =  Math.Round(kelvin-273.15,2);
+            return celsius;
         }
 
         /// <summary>
@@ -38,7 +41,9 @@ namespace temperature {
         /// <param name="celsius"></param>
         /// <returns></returns>
         public double ConvertCelsiusToFahrenheit (double celsius) {
-            throw new NotImplementedException ();
+            double fahrenheit = Math.Round((1.8 * celsius) +32,2) ;
+            return fahrenheit;
+
         }
         /// <summary>
         /// เปลี่ยนค่า องศา Kelvin ให้เป็น Fahrenheit
@@ -47,7 +52,8 @@ namespace temperature {
         /// <param name="Kelvin"></param>
         /// <returns></returns>
         public double ConvertKelvinToFahrenheit (double kelvin) {
-            throw new NotImplementedException ();
+            double fahrenheit = Math.Round(kelvin * 1.8 -459.67,2) ;
+            return fahrenheit;
         }
         /// <summary>
         /// เปลี่ยนค่า องศา Fahrenheit ให้เป็น Kelvin
@@ -56,7 +62,8 @@ namespace temperature {
         /// <param name="fahrenheit"></param>
         /// <returns></returns>
         public double ConvertFahrenheitToKelvin (double fahrenheit) {
-            throw new NotImplementedException ();
+            double kelvin = Math.Round((fahrenheit + 459.67)/(1.8),2) ;
+            return kelvin;
         }
         /// <summary>
         /// เปลี่ยนค่า องศา celsius ให้เป็น Kelvin
@@ -65,8 +72,12 @@ namespace temperature {
         /// <param name="celsius"></param>
         /// <returns></returns>
         public double ConvertCelsiusToKelvin (double celsius) {
-            throw new NotImplementedException ();
+            double kelvin = Math.Round(celsius + 273.15,2) ;
+            return kelvin;
         }
-
+        public string NoData (string input) {
+            input = "fail";
+            return input;
+        }
     }
 }
